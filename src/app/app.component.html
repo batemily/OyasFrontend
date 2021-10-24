@@ -1,0 +1,32 @@
+<!-- <div>
+  <button (click)="retrieveData()"> Retrieve Data</button>
+
+</div>
+
+<div>
+  <button (click)="devices()"> Devices</button>
+
+</div> -->
+<!--<ul class="sensorData">
+ <li *ngFor="let data of sensorData">
+    <p>{{ data.device_id }}</p>
+    <p>{{ data.raw }}</p>
+    <p>{{data.time}}</p>
+  </li>
+</ul>-->
+
+<!--
+water level
+[{"id":"8b113f91.2e12c","type":"function","z":"a8b1779b.cdf008",
+"name":"water level","func":"msg.payload = msg.payload_raw[0];\nreturn msg;
+","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":390,"y":300,
+"wires":[["2eb50619.6714ca","2f068c8e.233384"]]}]
+
+
+battery level
+[{"id":"464dd7cd.3bd8d8","type":"function","z":"a8b1779b.cdf008",
+"name":"battery level","func":"msg.payload = msg.payload_raw[1];\nreturn msg;
+","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":410,"y":420,
+"wires":[["e32063ce.2609c"]]}]-->
+
+<router-outlet></router-outlet>
