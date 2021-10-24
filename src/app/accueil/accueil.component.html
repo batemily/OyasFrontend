@@ -1,0 +1,11 @@
+<div class="row d-flex justify-content-around">
+    <div class="rain-chart">
+        <app-rain-charts [alertMessage]="rainAlertMessage" [centimetre]="true" [percent]="rainPercent"
+            [ChartData]="rainData" [ChartLabels]="ChartLabels" [donutColors]="donutColors1"></app-rain-charts>
+    </div>
+
+    <div class="battery-chart">
+        <app-rain-charts [alertMessage]="battAlertMessage" [centimetre]="false" [percent]="batPercent"
+            [ChartData]="battData" [ChartLabels]="ChartLabels1" [donutColors]="donutColors"></app-rain-charts>
+    </div>
+</div>
