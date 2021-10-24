@@ -1,0 +1,82 @@
+<div class="row bg account-pages" style="background: url('assets/images/foret.jpg');">
+
+    <!-- Begin page -->
+    <div class="accountbg">
+    </div>
+
+    <div class="login">
+
+        <div class="card">
+            <div class="card-block">
+
+                <div class="account-box">
+
+                    <div class="card-box p-5">
+                        <h2 class="text-uppercase text-center pb-4">
+                            <a class="text-success" href="index.html">
+                                <span><img alt="" height="150" src="assets/images/oyas1.jpg"></span>
+                            </a>
+                        </h2>
+
+                        <form [formGroup]="formGroup">
+
+                            <div class="form-group m-b-20 row">
+                                <div class="col-12">
+                                    <label for="emailaddress">Adresse Email</label><span class="text-danger">*</span>
+                                    <input class="form-control" formControlName="email" id="emailaddress" placeholder="Entrez votre email" type="email">
+                                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                                        <span class="text-danger">Saisissez votre adresse Gmail</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row m-b-20">
+                                <div class="col-12">
+                                    <a class="text-muted float-right" href="#" routerLink="/recoverpw-user"><small>Mot de passe
+                  oublié?</small></a>
+                                    <label for="password">Mot de passe</label><span class="text-danger">*</span>
+                                    <input class="form-control" formControlName="password" id="password" placeholder="Entrez votre mot de passe" type="password">
+                                    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                                        <span class="text-danger">Entrez votre mot de passe</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row m-b-20">
+                                <div class="col-12">
+
+                                    <div class="checkbox checkbox-custom">
+                                        <input checked="" id="remember" type="checkbox">
+                                        <label for="remember">
+                    Souviens-toi de moi
+                  </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row text-center m-t-10">
+                                <div class="col-12">
+                                    <button (click)="login()" class="btn btn-block login-btn btn-custom waves-effect waves-light">S'identifier
+                </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <div class="row m-t-30">
+                            <div class="col-sm-12 text-center">
+                                <p class="text-muted">Vous n'avez pas de compte? <a class="text-dark m-l-5" href="#" routerLink="/register"><b>S'inscrire</b></a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="chart">
+  <canvas baseChart [data]="ChartData" [labels]="ChartLabels" [chartType]="ChartType" [options]="ChartOptions"
+    [colors]="donutColors"> sa va
+  </canvas>
+
+  <div class="score" *ngIf="!centimetre">
+    {{percent}} <span class="percent">%</span>
+  </div>
+  <div class="score" *ngIf="centimetre">
+    {{percent}} <span class="percent">cm</span>
+  </div>
+
+
+  <h1 *ngIf="alertMessage!=''" class="alert"> {{alertMessage}}</h1>
+</div>

@@ -1,0 +1,59 @@
+<div class="container form">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="col-sm-8 mt-1 pb-2">
+                <h3 class="card-title mb-0"><strong>Mise à jour utilisateur</strong></h3>
+            </div>
+            <form [formGroup]="infoFormGroup">
+                <div class="form-group row">
+                    <div class="col">
+                        <label>Nom</label><span class="text-danger">*</span>
+                        <input class="form-control" formControlName="lastName" id="lastName" name="lastName" placeholder="Votre nom" type="text">
+                        <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">
+                            <span class="text-danger">Saisissez votre nom</span>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label>Prénom</label><span class="text-danger">*</span>
+                        <input class="form-control" formControlName="firstName" id="firstName" name="firstName" placeholder="Votre prenom" type="text">
+                        <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)">
+                            <span class="text-danger">Saisissez votre prénom</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row ">
+                    <div class="col-12">
+                        <label>Addresse Email</label><span class="text-danger">*</span>
+                        <input class="form-control" formControlName="email" id="email" placeholder="john@deo.com" type="text">
+                        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                            <span class="text-danger">Saisissez une adresse Gmail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col">
+                        <label>Téléphone</label><span class="text-danger">*</span>
+                        <input class="form-control" formControlName="tel" id="tel" placeholder="+216 20 154 145" type="tel" type="text">
+                        <div *ngIf="tel?.invalid && (tel?.dirty || tel?.touched)">
+                            <span class="text-danger">Entrez votre numéro de téléphone</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row text-center pt-1 float-right">
+                    <div class="col-md-12">
+                        <button (click)="save()" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.score {
+    font-size: xx-large;
+    font-weight: bolder;
+    position: relative;
+    transform: translate(14rem, -8rem);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.chart {
+    background: rgb(255, 255, 255);
+}
+
+.percent {}
+
+.alert {
+    text-align: center;
+    color: rgb(232, 8, 8);
+    font-size: xx-large;
+    border: 3px solid rgb(232, 8, 8);
+    border-radius: 10px;
+    animation: swing ease-in 1s infinite alternate;
+}
+
+@keyframes swing {
+    0% {
+        color: rgb(242, 240, 240);
+        border: 3px solid rgb(232, 8, 8);
+    }
+    10% {
+        color: rgb(226, 34, 117);
+        border: 3px solid rgb(232, 8, 8);
+    }
+    30% {
+        color: rgb(237, 95, 29);
+        border: 3px solid rgb(232, 8, 8);
+    }
+    70% {
+        color: rgb(158, 150, 129);
+        border: 3px solid rgb(232, 8, 8);
+    }
+    100% {
+        color: rgb(226, 172, 34);
+        border: 3px solid rgb(232, 8, 8);
+    }
+}

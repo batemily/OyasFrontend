@@ -1,0 +1,15 @@
+.bg {
+    background-repeat: no-repeat;
+    background-size: 300rem 100rem;
+    height: 100%;
+}
+
+.login {
+    width: 45%;
+    margin-left: 55%;
+    height: 100%;
+}
+
+.login-btn {
+    background-color: rgb(127, 201, 133);
+}

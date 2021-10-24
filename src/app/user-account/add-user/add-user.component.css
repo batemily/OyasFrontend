@@ -1,0 +1,10 @@
+.forme {
+    background-color: #fff;
+    height: 400rem !important;
+    display: block !important;
+    scroll-behavior: auto;
+}
+
+.form-controle {
+    height: 2rem;
+}

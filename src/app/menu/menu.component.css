@@ -1,0 +1,14 @@
+.content-page {
+    height: 70%;
+}
+
+.logos {
+    width: 30rem;
+}
+
+.user-name {
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

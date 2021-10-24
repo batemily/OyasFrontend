@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<body class="account-pages">
+
+  <!-- Begin page -->
+  <div class="accountbg"
+    style="background: url('assets/images/oyas3.jpg');background-size: cover;background-position: center;"></div>
+
+  <div class="wrapper-page account-page-full">
+
+    <div class="card">
+      <div class="card-block">
+
+        <div class="account-box">
+
+          <div class="card-box p-5">
+            <h2 class="text-uppercase text-center pb-4">
+              <a class="text-success" href="index.html">
+                <span><img alt="" height="150" src="assets/images/oyas1.jpg"></span>
+              </a>
+            </h2>
+            <div class="text-center m-b-20">
+              <p class="text-muted m-b-0">Entrez votre adresse e-mail et nous vous enverrons un e-mail avec des
+                instructions pour réinitialiser votre mot de passe. </p>
+            </div>
+
+            <form [formGroup]="formGroup">
+
+              <div class="form-group m-b-20 row">
+                <div class="col-12">
+                  <label for="emailaddress">Adresse Email</label><span class="text-danger">*</span>
+                  <input class="form-control" formControlName="email" id="emailaddress" placeholder="Entrez votre email"
+                    type="email">
+                  <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                    <span class="text-danger">Saisissez votre adresse Gmail</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row text-center m-t-10">
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" (click)="resetPassword()">Réinitialiser le mot de
+                    passe
+                  </button>
+                </div>
+              </div>
+
+            </form>
+
+            <div class="row m-t-50">
+              <div class="col-sm-12 text-center">
+                <p class="text-muted">Retour à <a class="text-dark m-l-5" href="#"
+                    routerLink="/login"><b>S'identifier</b></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

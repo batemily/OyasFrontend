@@ -1,0 +1,49 @@
+<div class="container pt-2">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="card col-md-8 col-lg-12 col-sm-12">
+            <div class="card-header">
+                <div class="col-sm-5 mt-1">
+                    <h3 class="card-title mb-0"><strong>Liste des Utilisateurs</strong></h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <button (click)="addUser()" *ngIf="isAdmin" class="btn btn-primary pull-right"><i class="fa fa-plus"></i></button>
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Email</th>
+                            <th>Tel</th>
+                            <th>Actif</th>
+                            <th *ngIf="isAdmin" class="text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users | paginate: {id:'listing_pagination',
+          itemsPerPage:4,currentPage:page,totalItems:totalRecords}" class="text-center">
+            <td>{{user.lastName}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.tel}}</td>
+            <td>{{user.isActive? 'Oui' : 'Non'}}</td>
+            <td><button (click)="editUser(user.id)" *ngIf="isAdmin" class="btn btn-primary btn-sm pointer">Modifier</button></td>
+            <td>
+              <button (click)="blockUser(user)" *ngIf="isAdmin && user.isActive" class="btn btn-danger btn-sm pointer">Bloquer</button>
+              <button (click)="unlockUser(user)" *ngIf="isAdmin && !user.isActive" class="btn btn-primary btn-sm pointer">Débloquer</button>
+            </td>
+            <td><button (click)="deleteUser(user.id)" *ngIf="isAdmin" class="btn btn-danger btn-sm pointer">Supprimer</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="text-center pt-1">
+          <pagination-controls (pageChange)="page=$event" autoHide="true" directionLinks="true" id="listing_pagination"
+                               maxSize="5"></pagination-controls>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+    </div>
+</div>
